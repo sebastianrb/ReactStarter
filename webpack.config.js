@@ -16,12 +16,9 @@ module.exports = {
         path: __dirname + "/dist",
         filename: "app.js"
     },
-    // resolve: {
-    //   //these are the locations in which Webpack will look for modules
-    //   modules: [SRC, NODE_MODULES, path.join(SRC, 'modules')]
-    // },
     resolve: {
-      extensions: ['.js', '.jsx']
+      //these are the locations in which Webpack will look for modules
+      modules: [SRC, NODE_MODULES, path.join(SRC, 'components')]
     },
     module: {
         //the rules array contains rules and configuration for various installed loaders
@@ -33,8 +30,6 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                //loaders applied from right to left
-                // loaders: ['style-loader', 'css-loader']
                 loader: ExtractTextPlugin.extract('css-loader')
             }
         ]
