@@ -21,7 +21,7 @@ module.exports = {
     //   modules: [SRC, NODE_MODULES, path.join(SRC, 'modules')]
     // },
     resolve: {
-      extensions: ['', '.js', '.jsx']
+      extensions: ['.js', '.jsx']
     },
     module: {
         //the rules array contains rules and configuration for various installed loaders

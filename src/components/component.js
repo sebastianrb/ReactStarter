@@ -8,7 +8,7 @@ export default class TestComponent extends React.Component {
 
   render() {
     return (
-      <div>This is a test component</div>
+      <div>This is a test component, yessir</div>
     );
   }
 }
