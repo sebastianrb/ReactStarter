@@ -14,7 +14,7 @@ export default class App extends Component {
     render() {
         return (
             <div>
-               React is working! Merp a lerp
+               React is working!
                <TestComponent />
             </div>
         )
