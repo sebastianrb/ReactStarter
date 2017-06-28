@@ -11,7 +11,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 module.exports = {
-    entry: "./src/index.js",
+    entry: ["./src/index.js", "./src/styles/main.scss"],
     output: {
         path: __dirname + "/dist",
         filename: "app.js"
@@ -31,6 +31,10 @@ module.exports = {
             {
                 test: /\.css$/,
                 loader: ExtractTextPlugin.extract('css-loader')
+            },
+            {
+                test: /\.(sass|scss)$/,
+                loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader'])
             }
         ]
     },
